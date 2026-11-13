@@ -1,0 +1,79 @@
+{
+  "encounter_id": "enc_fixture_002_htn_lipid",
+  "patient": {
+    "id": "pat_002",
+    "name": "शांति देवी (Shanti Devi)",
+    "age": 58,
+    "gender": "FEMALE",
+    "phone": "9811223344",
+    "language": "hi-IN"
+  },
+  "clinician": {
+    "id": "doc_verma_88419",
+    "name": "Dr. R. K. Verma",
+    "reg_number": "RMP-UP-88419",
+    "clinic": "Verma Clinic & Daycare"
+  },
+  "clinical_diagnosis_raw": "Hypertension + Mixed Dyslipidemia",
+  "lab_investigations": [
+    {
+      "test_name": "Serum Total Cholesterol",
+      "observed_value": 242.0,
+      "unit": "mg/dL",
+      "reference_range": "< 200",
+      "status": "HIGH"
+    },
+    {
+      "test_name": "Serum LDL Cholesterol",
+      "observed_value": 162.0,
+      "unit": "mg/dL",
+      "reference_range": "< 100",
+      "status": "HIGH"
+    }
+  ],
+  "prescribed_items": [
+    {
+      "medicine_id": 112,
+      "brand_name": "Amlong 5",
+      "generic_name": "Amlodipine 5mg",
+      "frequency_code": "1-0-0",
+      "dose_morning": 1.0,
+      "dose_afternoon": 0.0,
+      "dose_night": 0.0,
+      "food_relation": "AFTER_FOOD",
+      "is_sos": false
+    },
+    {
+      "medicine_id": 118,
+      "brand_name": "Atorva 10",
+      "generic_name": "Atorvastatin 10mg",
+      "frequency_code": "0-0-1",
+      "dose_morning": 0.0,
+      "dose_afternoon": 0.0,
+      "dose_night": 1.0,
+      "food_relation": "AFTER_FOOD",
+      "is_sos": false
+    }
+  ],
+  "expected_deterministic_output": {
+    "morning_slot": [
+      {
+        "brand": "ऐमलॉन्ग 5 (Amlong 5)",
+        "quantity": 1.0,
+        "unit": "गोली",
+        "timing": "नाश्ते के बाद",
+        "purpose": "बीपी (रक्तचाप) सामान्य रखने के लिए"
+      }
+    ],
+    "night_slot": [
+      {
+        "brand": "एटोरवा 10 (Atorva 10)",
+        "quantity": 1.0,
+        "unit": "गोली",
+        "timing": "रात को सोने से पहले / खाने के बाद",
+        "purpose": "खून में कोलेस्ट्रॉल और चिकनाई को नियंत्रित करने के लिए"
+      }
+    ],
+    "safety_guardrails_verified": true
+  }
+}

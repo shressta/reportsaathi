@@ -1,0 +1,72 @@
+{
+  "encounter_id": "enc_fixture_008_copd_bronchitis",
+  "patient": {
+    "id": "pat_008",
+    "name": "हरीश चंद्र (Harish Chandra)",
+    "age": 53,
+    "gender": "MALE",
+    "phone": "9844556677",
+    "language": "hi-IN"
+  },
+  "clinician": {
+    "id": "doc_verma_88419",
+    "name": "Dr. R. K. Verma",
+    "reg_number": "RMP-UP-88419",
+    "clinic": "Verma Clinic & Daycare"
+  },
+  "clinical_diagnosis_raw": "Chronic Obstructive Pulmonary Disease with Allergic Rhinitis",
+  "lab_investigations": [],
+  "prescribed_items": [
+    {
+      "medicine_id": 801,
+      "brand_name": "AB-Flo 100",
+      "generic_name": "Acebrophylline 100mg",
+      "frequency_code": "1-0-1",
+      "dose_morning": 1.0,
+      "dose_afternoon": 0.0,
+      "dose_night": 1.0,
+      "food_relation": "AFTER_FOOD",
+      "is_sos": false
+    },
+    {
+      "medicine_id": 805,
+      "brand_name": "Monticope",
+      "generic_name": "Levocetirizine 5mg + Montelukast 10mg",
+      "frequency_code": "0-0-1",
+      "dose_morning": 0.0,
+      "dose_afternoon": 0.0,
+      "dose_night": 1.0,
+      "food_relation": "AFTER_FOOD",
+      "special_instruction_hindi": "रात को सोने से पहले लें, इससे नींद या सुस्ती आ सकती है",
+      "is_sos": false
+    }
+  ],
+  "expected_deterministic_output": {
+    "morning_slot": [
+      {
+        "brand": "एबी-फ्लो 100 (AB-Flo 100)",
+        "quantity": 1.0,
+        "unit": "कैप्सूल",
+        "timing": "सुबह नाश्ते के बाद",
+        "purpose": "सांस की नली खोलने और बलगम साफ करने के लिए"
+      }
+    ],
+    "night_slot": [
+      {
+        "brand": "एबी-फ्लो 100 (AB-Flo 100)",
+        "quantity": 1.0,
+        "unit": "कैप्सूल",
+        "timing": "रात खाने के बाद",
+        "purpose": "सांस की नली खोलने और बलगम साफ करने के लिए"
+      },
+      {
+        "brand": "मोंटिकोप (Monticope)",
+        "quantity": 1.0,
+        "unit": "गोली",
+        "timing": "रात को सोने से पहले",
+        "purpose": "एलर्जी, छींक और सांस की तकलीफ रोकने के लिए"
+      }
+    ],
+    "safety_guardrails_verified": true
+  }
+}

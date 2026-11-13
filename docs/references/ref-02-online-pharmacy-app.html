@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  * { box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; margin: 0; padding: 0; }
+  body { background: #f8fafc; padding: 12px; color: #1e293b; font-size: 13px; }
+  .top-bar { background: #10b981; color: #fff; padding: 12px; border-radius: 8px 8px 0 0; display: flex; align-items: center; justify-content: space-between; }
+  .cart-container { background: #fff; border: 1px solid #e2e8f0; border-radius: 0 0 8px 8px; padding: 14px; }
+  .med-item { border-bottom: 1px solid #f1f5f9; padding: 10px 0; display: flex; justify-content: space-between; }
+  .med-details h3 { font-size: 14px; font-weight: 700; color: #0f172a; margin-bottom: 4px; }
+  .med-details p { font-size: 11px; color: #64748b; margin-bottom: 6px; }
+  .dosage-chips { display: flex; gap: 6px; }
+  .chip { background: #f1f5f9; color: #334155; font-size: 10px; font-weight: 600; padding: 3px 6px; border-radius: 4px; }
+  .chip.active { background: #dcfce7; color: #166534; }
+  .substitute-alert { background: #fffbeb; border: 1px solid #fde68a; border-radius: 6px; padding: 8px; margin: 10px 0; font-size: 11px; }
+  .substitute-alert strong { color: #b45309; }
+  .checkout-btn { width: 100%; background: #10b981; color: #fff; border: none; padding: 12px; border-radius: 6px; font-weight: 700; font-size: 14px; margin-top: 10px; cursor: pointer; }
+</style>
+</head>
+<body>
+  <div class="top-bar">
+    <span style="font-weight: 700;">Pharmacy Order Summary</span>
+    <span style="font-size: 11px;">Delivery in 24 hrs</span>
+  </div>
+  <div class="cart-container">
+    <div class="med-item">
+      <div class="med-details">
+        <h3>Telmisartan 40mg (Telma 40)</h3>
+        <p>Glenmark Pharmaceuticals • Strip of 15</p>
+        <div class="dosage-chips">
+          <span class="chip active">1 Tablet Daily (OD)</span>
+          <span class="chip">After Breakfast</span>
+        </div>
+      </div>
+      <div style="text-align: right;">
+        <span style="font-weight: 700; font-size: 14px;">₹142.50</span><br>
+        <span style="text-decoration: line-through; color: #94a3b8; font-size: 11px;">₹180</span>
+      </div>
+    </div>
+
+    <div class="med-item">
+      <div class="med-details">
+        <h3>Metformin 500mg (Glycomet 500)</h3>
+        <p>USV Pvt Ltd • Strip of 20</p>
+        <div class="dosage-chips">
+          <span class="chip active">Twice Daily (BD)</span>
+          <span class="chip">With Food</span>
+        </div>
+      </div>
+      <div style="text-align: right;">
+        <span style="font-weight: 700; font-size: 14px;">₹52.00</span>
+      </div>
+    </div>
+
+    <div class="substitute-alert">
+      <strong>⚠️ Lower cost generic substitute available:</strong><br>
+      Switch to Metformin IP 500mg @ ₹22 (Save 58%).
+    </div>
+
+    <button class="checkout-btn">Proceed to Pay ₹194.50</button>
+  </div>
+</body>
+</html>

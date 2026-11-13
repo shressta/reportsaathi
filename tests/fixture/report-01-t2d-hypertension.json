@@ -1,0 +1,93 @@
+{
+  "encounter_id": "enc_fixture_001_t2d_htn",
+  "patient": {
+    "id": "pat_001",
+    "name": "रमेश कुमार (Ramesh Kumar)",
+    "age": 52,
+    "gender": "MALE",
+    "phone": "9876543210",
+    "language": "hi-IN"
+  },
+  "clinician": {
+    "id": "doc_verma_88419",
+    "name": "Dr. R. K. Verma",
+    "reg_number": "RMP-UP-88419",
+    "clinic": "Verma Clinic & Daycare"
+  },
+  "clinical_diagnosis_raw": "Type 2 Diabetes Mellitus + Essential Hypertension (Chronic)",
+  "lab_investigations": [
+    {
+      "test_name": "Fasting Blood Sugar (FBS)",
+      "observed_value": 155.0,
+      "unit": "mg/dL",
+      "reference_range": "70 - 100",
+      "status": "ELEVATED"
+    },
+    {
+      "test_name": "HbA1c (Glycated Hemoglobin)",
+      "observed_value": 8.2,
+      "unit": "%",
+      "reference_range": "< 5.7 Normal, 5.7-6.4 Pre-diabetic, > 6.5 Diabetic",
+      "status": "ELEVATED"
+    },
+    {
+      "test_name": "Blood Pressure (Sitting)",
+      "observed_value": "148/92",
+      "unit": "mmHg",
+      "reference_range": "< 120/80",
+      "status": "STAGE_1_HTN"
+    }
+  ],
+  "prescribed_items": [
+    {
+      "medicine_id": 104,
+      "brand_name": "Telma 40",
+      "generic_name": "Telmisartan 40mg",
+      "frequency_code": "1-0-0",
+      "dose_morning": 1.0,
+      "dose_afternoon": 0.0,
+      "dose_night": 0.0,
+      "food_relation": "AFTER_FOOD",
+      "is_sos": false
+    },
+    {
+      "medicine_id": 208,
+      "brand_name": "Glycomet 500",
+      "generic_name": "Metformin Hydrochloride 500mg",
+      "frequency_code": "1-0-1",
+      "dose_morning": 1.0,
+      "dose_afternoon": 0.0,
+      "dose_night": 1.0,
+      "food_relation": "AFTER_FOOD",
+      "is_sos": false
+    }
+  ],
+  "expected_deterministic_output": {
+    "morning_slot": [
+      {
+        "brand": "टेल्मा 40 (Telma 40)",
+        "quantity": 1.0,
+        "unit": "गोली",
+        "timing": "नाश्ते के बाद",
+        "purpose": "बीपी (खून का दबाव) सामान्य रखने के लिए"
+      },
+      {
+        "brand": "ग्लाइकोमेट 500 (Glycomet 500)",
+        "quantity": 1.0,
+        "unit": "गोली",
+        "timing": "नाश्ते के बाद",
+        "purpose": "शुगर (मधुमेह) नियंत्रण के लिए"
+      }
+    ],
+    "night_slot": [
+      {
+        "brand": "ग्लाइकोमेट 500 (Glycomet 500)",
+        "quantity": 1.0,
+        "unit": "गोली",
+        "timing": "खाने के बाद",
+        "purpose": "शुगर (मधुमेह) नियंत्रण के लिए"
+      }
+    ],
+    "safety_guardrails_verified": true
+  }
+}

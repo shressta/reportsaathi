@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  * { box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; margin: 0; padding: 0; }
+  body { background: #f4f6f8; padding: 16px; color: #333; font-size: 13px; }
+  .header { background: #1a365d; color: #fff; padding: 12px; border-radius: 6px 6px 0 0; display: flex; justify-content: space-between; align-items: center; }
+  .header h2 { font-size: 14px; font-weight: 600; }
+  .card { background: #fff; border: 1px solid #e2e8f0; border-radius: 0 0 6px 6px; padding: 12px; margin-bottom: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+  .patient-meta { display: flex; justify-content: space-between; font-size: 11px; color: #64748b; margin-bottom: 8px; border-bottom: 1px solid #f1f5f9; padding-bottom: 6px; }
+  table { width: 100%; border-collapse: collapse; margin-top: 8px; font-size: 12px; }
+  th { text-align: left; padding: 6px 4px; background: #f8fafc; color: #475569; font-size: 11px; border-bottom: 2px solid #e2e8f0; }
+  td { padding: 8px 4px; border-bottom: 1px solid #f1f5f9; vertical-align: top; }
+  .param { font-weight: 600; color: #1e293b; }
+  .subparam { font-size: 10px; color: #64748b; display: block; }
+  .val-high { color: #dc2626; font-weight: 700; }
+  .val-norm { color: #16a34a; font-weight: 600; }
+  .tag-danger { background: #fee2e2; color: #b91c1c; font-size: 10px; padding: 2px 6px; border-radius: 4px; font-weight: 700; display: inline-block; margin-top: 2px; }
+  .banner-upsell { background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 6px; padding: 10px; margin-top: 10px; }
+  .banner-upsell h4 { color: #1d4ed8; font-size: 12px; margin-bottom: 4px; }
+  .banner-upsell p { font-size: 11px; color: #3b82f6; }
+  .banner-upsell button { margin-top: 6px; background: #2563eb; color: #fff; border: none; padding: 6px 12px; border-radius: 4px; font-size: 11px; font-weight: 600; }
+</style>
+</head>
+<body>
+  <div class="header">
+    <h2>LAL PATHLABS / 1MG DIAGNOSTICS</h2>
+    <span style="font-size: 11px; opacity: 0.8;">Ref #782910</span>
+  </div>
+  <div class="card">
+    <div class="patient-meta">
+      <span>Patient: Ramesh Kumar (50M)</span>
+      <span>Date: 12-Nov-2026</span>
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th>Investigation</th>
+          <th>Observed</th>
+          <th>Reference Range</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="param">Fasting Blood Sugar (FBS)</span><span class="subparam">Hexokinase method</span></td>
+          <td><span class="val-high">168.0 mg/dL</span><br><span class="tag-danger">HIGH ALERT</span></td>
+          <td>70.0 - 100.0 mg/dL</td>
+        </tr>
+        <tr>
+          <td><span class="param">HbA1c (Glycated Hb)</span><span class="subparam">HPLC Method</span></td>
+          <td><span class="val-high">8.4 %</span><br><span class="tag-danger">POOR CONTROL</span></td>
+          <td>< 5.7 % Normal<br>5.7-6.4% Pre-diabetic<br>&gt; 6.5% Diabetic</td>
+        </tr>
+        <tr>
+          <td><span class="param">Serum Creatinine</span><span class="subparam">Modified Jaffe</span></td>
+          <td><span class="val-norm">1.10 mg/dL</span></td>
+          <td>0.70 - 1.20 mg/dL</td>
+        </tr>
+        <tr>
+          <td><span class="param">Total Cholesterol</span><span class="subparam">Enzymatic CHOD-PAP</span></td>
+          <td><span class="val-high">234 mg/dL</span><br><span class="tag-danger">BORDERLINE HIGH</span></td>
+          <td>< 200 mg/dL Desirable</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="banner-upsell">
+      <h4>🚨 Comprehensive Cardiac Risk Screening (84 Tests)</h4>
+      <p>Special Offer @ ₹999 (Regular ₹3200). Book home collection in 30 mins.</p>
+      <button>Book Tele-Doctor Review (₹299)</button>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,101 @@
+{
+  "encounter_id": "enc_fixture_003_fever_infection",
+  "patient": {
+    "id": "pat_003",
+    "name": "सुरेश शर्मा (Suresh Sharma)",
+    "age": 49,
+    "gender": "MALE",
+    "phone": "9988776655",
+    "language": "hi-IN"
+  },
+  "clinician": {
+    "id": "doc_verma_88419",
+    "name": "Dr. R. K. Verma",
+    "reg_number": "RMP-UP-88419",
+    "clinic": "Verma Clinic & Daycare"
+  },
+  "clinical_diagnosis_raw": "Acute Bronchitis with Secondary Bacterial Infection",
+  "lab_investigations": [
+    {
+      "test_name": "Total Leucocyte Count (TLC)",
+      "observed_value": 12800,
+      "unit": "/cu.mm",
+      "reference_range": "4000 - 11000",
+      "status": "MILD_LEUKOCYTOSIS"
+    }
+  ],
+  "prescribed_items": [
+    {
+      "medicine_id": 301,
+      "brand_name": "Augmentin 625",
+      "generic_name": "Amoxicillin 500mg + Clavulanic Acid 125mg",
+      "frequency_code": "1-0-1",
+      "dose_morning": 1.0,
+      "dose_afternoon": 0.0,
+      "dose_night": 1.0,
+      "food_relation": "AFTER_FOOD",
+      "duration_days": 5,
+      "special_instruction_hindi": "यह एंटीबायोटिक है, 5 दिन का पूरा कोर्स करें",
+      "is_sos": false
+    },
+    {
+      "medicine_id": 305,
+      "brand_name": "Pan 40",
+      "generic_name": "Pantoprazole 40mg",
+      "frequency_code": "1-0-0",
+      "dose_morning": 1.0,
+      "dose_afternoon": 0.0,
+      "dose_night": 0.0,
+      "food_relation": "EMPTY_STOMACH",
+      "duration_days": 5,
+      "is_sos": false
+    },
+    {
+      "medicine_id": 310,
+      "brand_name": "Dolo 650",
+      "generic_name": "Paracetamol 650mg",
+      "frequency_code": "SOS",
+      "dose_morning": 0.0,
+      "dose_afternoon": 0.0,
+      "dose_night": 0.0,
+      "food_relation": "AFTER_FOOD",
+      "is_sos": true,
+      "sos_condition_hindi": "केवल तेज बुखार या बदन दर्द होने पर"
+    }
+  ],
+  "expected_deterministic_output": {
+    "morning_slot": [
+      {
+        "brand": "पैन 40 (Pan 40)",
+        "quantity": 1.0,
+        "unit": "गोली",
+        "timing": "सुबह खाली पेट (नाश्ते से आधा घंटा पहले)",
+        "purpose": "पेट में गैस और जलन रोकने के लिए"
+      },
+      {
+        "brand": "ऑगमेंटिन 625 (Augmentin 625)",
+        "quantity": 1.0,
+        "unit": "गोली",
+        "timing": "नाश्ते के बाद",
+        "purpose": "संक्रमण (इन्फेक्शन) ठीक करने के लिए"
+      }
+    ],
+    "night_slot": [
+      {
+        "brand": "ऑगमेंटिन 625 (Augmentin 625)",
+        "quantity": 1.0,
+        "unit": "गोली",
+        "timing": "खाने के बाद",
+        "purpose": "संक्रमण (इन्फेक्शन) ठीक करने के लिए"
+      }
+    ],
+    "sos_slot": [
+      {
+        "brand": "डोलो 650 (Dolo 650)",
+        "timing": "जरूरत पड़ने पर (तेज बुखार में)",
+        "purpose": "बुखार और बदन दर्द कम करने के लिए"
+      }
+    ],
+    "safety_guardrails_verified": true
+  }
+}

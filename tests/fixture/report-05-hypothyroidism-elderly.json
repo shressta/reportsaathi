@@ -1,0 +1,53 @@
+{
+  "encounter_id": "enc_fixture_005_thyroid",
+  "patient": {
+    "id": "pat_005",
+    "name": "कमला बाई (Kamla Bai)",
+    "age": 61,
+    "gender": "FEMALE",
+    "phone": "9899112233",
+    "language": "hi-IN"
+  },
+  "clinician": {
+    "id": "doc_verma_88419",
+    "name": "Dr. R. K. Verma",
+    "reg_number": "RMP-UP-88419",
+    "clinic": "Verma Clinic & Daycare"
+  },
+  "clinical_diagnosis_raw": "Primary Hypothyroidism",
+  "lab_investigations": [
+    {
+      "test_name": "Serum TSH",
+      "observed_value": 8.4,
+      "unit": "uIU/mL",
+      "reference_range": "0.35 - 4.94",
+      "status": "HIGH"
+    }
+  ],
+  "prescribed_items": [
+    {
+      "medicine_id": 501,
+      "brand_name": "Thyronorm 50",
+      "generic_name": "Levothyroxine Sodium 50mcg",
+      "frequency_code": "1-0-0",
+      "dose_morning": 1.0,
+      "dose_afternoon": 0.0,
+      "dose_night": 0.0,
+      "food_relation": "EMPTY_STOMACH",
+      "special_instruction_hindi": "सुबह उठते ही सादे पानी के साथ लें, चाय से 30 मिनट पहले",
+      "is_sos": false
+    }
+  ],
+  "expected_deterministic_output": {
+    "morning_slot": [
+      {
+        "brand": "थायरोनॉर्म 50 (Thyronorm 50)",
+        "quantity": 1.0,
+        "unit": "गोली",
+        "timing": "सुबह उठते ही खाली पेट (चाय से पहले)",
+        "purpose": "थायरॉयड ग्रंथि का स्तर संतुलित रखने के लिए"
+      }
+    ],
+    "safety_guardrails_verified": true
+  }
+}

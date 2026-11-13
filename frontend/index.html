@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Health Check</title>
+</head>
+<body>
+  <h1>Backend Health</h1>
+  <div id="status">Loading…</div>
+  <script>
+    fetch('/api/health')
+      .then(r => r.json())
+      .then(d => {
+        document.getElementById('status').textContent = `Medicines count: ${d.medicines_count}`;
+      })
+      .catch(e => {
+        document.getElementById('status').textContent = 'Error fetching health';
+        console.error(e);
+      });
+  </script>
+</body>
+</html>

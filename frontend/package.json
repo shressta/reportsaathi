@@ -1,0 +1,12 @@
+{
+  "name": "frontend",
+  "version": "0.1.0",
+  "scripts": {
+    "start": "serve -s . -l 3000",
+    "lint": "echo \"No lint configured\"",
+    "test": "echo \"No tests\""
+  },
+  "devDependencies": {
+    "serve": "^14.2.0"
+  }
+}

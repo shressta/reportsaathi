@@ -1,0 +1,71 @@
+{
+  "encounter_id": "enc_fixture_004_gerd_gastritis",
+  "patient": {
+    "id": "pat_004",
+    "name": "मोहन लाल (Mohan Lal)",
+    "age": 55,
+    "gender": "MALE",
+    "phone": "9871122334",
+    "language": "hi-IN"
+  },
+  "clinician": {
+    "id": "doc_verma_88419",
+    "name": "Dr. R. K. Verma",
+    "reg_number": "RMP-UP-88419",
+    "clinic": "Verma Clinic & Daycare"
+  },
+  "clinical_diagnosis_raw": "Severe Acid Peptic Disease (GERD) with Reflux",
+  "lab_investigations": [],
+  "prescribed_items": [
+    {
+      "medicine_id": 401,
+      "brand_name": "Razo-D",
+      "generic_name": "Rabeprazole 20mg + Domperidone 30mg SR",
+      "frequency_code": "1-0-0",
+      "dose_morning": 1.0,
+      "dose_afternoon": 0.0,
+      "dose_night": 0.0,
+      "food_relation": "EMPTY_STOMACH",
+      "is_sos": false
+    },
+    {
+      "medicine_id": 405,
+      "brand_name": "Sucrafil O",
+      "generic_name": "Sucralfate 1000mg + Oxetacaine 20mg Suspension",
+      "frequency_code": "1-0-1",
+      "dose_morning": 10.0,
+      "dose_afternoon": 0.0,
+      "dose_night": 10.0,
+      "food_relation": "BEFORE_FOOD",
+      "is_sos": false
+    }
+  ],
+  "expected_deterministic_output": {
+    "morning_slot": [
+      {
+        "brand": "रेज़ो-डी (Razo-D)",
+        "quantity": 1.0,
+        "unit": "कैप्सूल",
+        "timing": "सुबह खाली पेट",
+        "purpose": "एसिडिटी और उल्टी रोकने के लिए"
+      },
+      {
+        "brand": "सुक्राफिल ओ (Sucrafil O)",
+        "quantity": 10.0,
+        "unit": "मिलीलीटर (सिरप)",
+        "timing": "खाने से 1 घंटा पहले",
+        "purpose": "पेट और गले की परत को छाले से बचाने के लिए"
+      }
+    ],
+    "night_slot": [
+      {
+        "brand": "सुक्राफिल ओ (Sucrafil O)",
+        "quantity": 10.0,
+        "unit": "मिलीलीटर (सिरप)",
+        "timing": "रात के खाने से 1 घंटा पहले",
+        "purpose": "पेट और गले की परत को छाले से बचाने के लिए"
+      }
+    ],
+    "safety_guardrails_verified": true
+  }
+}

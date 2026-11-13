@@ -1,0 +1,86 @@
+{
+  "encounter_id": "enc_fixture_007_ckd_borderline",
+  "patient": {
+    "id": "pat_007",
+    "name": "जगदीश प्रसाद (Jagdish Prasad)",
+    "age": 56,
+    "gender": "MALE",
+    "phone": "9833445566",
+    "language": "hi-IN"
+  },
+  "clinician": {
+    "id": "doc_verma_88419",
+    "name": "Dr. R. K. Verma",
+    "reg_number": "RMP-UP-88419",
+    "clinic": "Verma Clinic & Daycare"
+  },
+  "clinical_diagnosis_raw": "Chronic Kidney Disease (Stage 3) with Fluid Retention",
+  "lab_investigations": [
+    {
+      "test_name": "Serum Creatinine",
+      "observed_value": 1.9,
+      "unit": "mg/dL",
+      "reference_range": "0.7 - 1.2",
+      "status": "HIGH"
+    },
+    {
+      "test_name": "Blood Urea",
+      "observed_value": 58.0,
+      "unit": "mg/dL",
+      "reference_range": "15 - 45",
+      "status": "HIGH"
+    }
+  ],
+  "prescribed_items": [
+    {
+      "medicine_id": 701,
+      "brand_name": "Dytor 10",
+      "generic_name": "Torsemide 10mg",
+      "frequency_code": "1-0-0",
+      "dose_morning": 1.0,
+      "dose_afternoon": 0.0,
+      "dose_night": 0.0,
+      "food_relation": "AFTER_FOOD",
+      "is_sos": false
+    },
+    {
+      "medicine_id": 705,
+      "brand_name": "Sodamint 500",
+      "generic_name": "Sodium Bicarbonate 500mg",
+      "frequency_code": "1-0-1",
+      "dose_morning": 1.0,
+      "dose_afternoon": 0.0,
+      "dose_night": 1.0,
+      "food_relation": "AFTER_FOOD",
+      "is_sos": false
+    }
+  ],
+  "expected_deterministic_output": {
+    "morning_slot": [
+      {
+        "brand": "डाइटॉर 10 (Dytor 10)",
+        "quantity": 1.0,
+        "unit": "गोली",
+        "timing": "सुबह नाश्ते के बाद",
+        "purpose": "शरीर की सूजन और पेशाब ठीक रखने के लिए"
+      },
+      {
+        "brand": "सोडामिंट 500 (Sodamint 500)",
+        "quantity": 1.0,
+        "unit": "गोली",
+        "timing": "नाश्ते के बाद",
+        "purpose": "खून में एसिड की मात्रा संतुलित रखने के लिए"
+      }
+    ],
+    "night_slot": [
+      {
+        "brand": "सोडामिंट 500 (Sodamint 500)",
+        "quantity": 1.0,
+        "unit": "गोली",
+        "timing": "रात खाने के बाद",
+        "purpose": "खून में एसिड की मात्रा संतुलित रखने के लिए"
+      }
+    ],
+    "safety_guardrails_verified": true
+  }
+}

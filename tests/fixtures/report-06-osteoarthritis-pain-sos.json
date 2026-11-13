@@ -1,0 +1,71 @@
+{
+  "encounter_id": "enc_fixture_006_osteoarthritis",
+  "patient": {
+    "id": "pat_006",
+    "name": "भगवती देवी (Bhagwati Devi)",
+    "age": 64,
+    "gender": "FEMALE",
+    "phone": "9822334455",
+    "language": "hi-IN"
+  },
+  "clinician": {
+    "id": "doc_verma_88419",
+    "name": "Dr. R. K. Verma",
+    "reg_number": "RMP-UP-88419",
+    "clinic": "Verma Clinic & Daycare"
+  },
+  "clinical_diagnosis_raw": "Bilateral Knee Osteoarthritis with Joint Pain",
+  "lab_investigations": [
+    {
+      "test_name": "Serum Uric Acid",
+      "observed_value": 5.2,
+      "unit": "mg/dL",
+      "reference_range": "2.6 - 6.0",
+      "status": "NORMAL"
+    }
+  ],
+  "prescribed_items": [
+    {
+      "medicine_id": 601,
+      "brand_name": "Shelcal 500",
+      "generic_name": "Calcium 500mg + Vitamin D3 250IU",
+      "frequency_code": "0-1-0",
+      "dose_morning": 0.0,
+      "dose_afternoon": 1.0,
+      "dose_night": 0.0,
+      "food_relation": "AFTER_FOOD",
+      "is_sos": false
+    },
+    {
+      "medicine_id": 605,
+      "brand_name": "Zerodol-P",
+      "generic_name": "Aceclofenac 100mg + Paracetamol 325mg",
+      "frequency_code": "SOS",
+      "dose_morning": 0.0,
+      "dose_afternoon": 0.0,
+      "dose_night": 0.0,
+      "food_relation": "AFTER_FOOD",
+      "is_sos": true,
+      "sos_condition_hindi": "घुटने में तेज दर्द होने पर, खाना खाने के बाद ही लें"
+    }
+  ],
+  "expected_deterministic_output": {
+    "afternoon_slot": [
+      {
+        "brand": "शैलकल 500 (Shelcal 500)",
+        "quantity": 1.0,
+        "unit": "गोली",
+        "timing": "दोपहर के खाने के बाद",
+        "purpose": "हड्डियों को मजबूत रखने के लिए"
+      }
+    ],
+    "sos_slot": [
+      {
+        "brand": "जीरोडोल-पी (Zerodol-P)",
+        "timing": "दर्द होने पर (खाना खाने के बाद)",
+        "purpose": "दर्द और सूजन कम करने के लिए"
+      }
+    ],
+    "safety_guardrails_verified": true
+  }
+}
